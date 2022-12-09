@@ -1,9 +1,9 @@
-<#-- @ftlvariable name="offers" type="kotlin.collections.List<com.example.models.Offer>" -->
+<#-- @ftlvariable name="offer" type="com.example.models.Offer" -->
 <#import "_layout.ftl" as layout />
 <@layout.header>
-    <h2>
-        Összes ajánlat
-    </h2>
+    <h3>
+        Mentett ajánlataim
+    </h3>
     <hr>
     <div class="card-deck mx-5">
         <#list offers?reverse as offer>
@@ -19,6 +19,10 @@
                             <i class="card-text">
                                 ${offer.price} Ft
                             </i>
+                            <form action="/saved_offers/${offer.id}" method="post">
+                                <button type="submit" class="btn btn-primary" name="_action" value="delete">Törlés
+                                </button>
+                            </form>
                             <form action="/offers/${offer.id}" method="get">
                                 <button type="submit" class="btn btn-primary">Részletek</button>
                             </form>

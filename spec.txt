@@ -1,0 +1,9 @@
+nagyon leegyszerűsített szállásfoglaló oldal demó
+
+X különböző szállások között böngészni,
+X azok adatait megnézni és
+X "lefoglalni" azt az utazásunkhoz.
+
+gh szerint +: 
+X provide a REST API
+X store data persistently in a db
